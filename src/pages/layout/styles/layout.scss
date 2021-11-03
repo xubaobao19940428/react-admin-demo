@@ -1,0 +1,30 @@
+.layout{
+    width:100%;
+    height:100%;
+    display: flex;
+    background-color:#fafafa;
+    .view_content{
+        flex:1;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        .view_content_header{
+            height:50px;
+            width:100%;
+            padding:0 20px;
+            box-sizing: border-box;
+            background-color:#fff;
+            display: flex;
+            align-items: center;
+           
+        }
+        
+    }
+}
+.ant-menu{
+    height:100%;
+}
+.ant-menu:not(.ant-menu-inline-collapsed){
+    width: 221px;
+    height: 100%;
+}

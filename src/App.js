@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+/**
+ * 这里保留App.js是为了全局的方法只处理一次
+ */
+import React from "react";
+import "./App.css";
+import { HashRouter } from "react-router-dom";
+import { renderRoutes } from "react-router-config";
+// import { getServerTime } from "@/api";
+import Routers from "./router";
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+  componentDidMount() {
+    //  getServerTime().then(resultes=>{
+    //    if(resultes.status==='success'){
+    //      sessionStorage.setItem('serveTime',resultes.data.time)
+    //    }
+    //  })
+  }
+  render() {
+    return (
+      <div className="App">
+        <HashRouter>{renderRoutes(Routers)}</HashRouter>
+      </div>
+    );
+  }
 }
 
 export default App;

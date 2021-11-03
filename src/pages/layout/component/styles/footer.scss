@@ -1,0 +1,42 @@
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background: #ffffff;
+    border-top: 1px solid #cccccc;
+    ul {
+        display: flex;
+        padding-left: 0;
+        margin-top: 0;
+        li {
+            flex: 1;
+            list-style: none;
+
+            div {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                font-size: 12px;
+                padding: 4px 0;
+                img {
+                    width: 27px;
+                    height: 27px;
+                }
+                .show{
+                    position:absolute;
+                    display: block;
+                }
+                .hide{
+                    
+                    display:none;
+                }
+                
+            }
+
+            &.active {
+                color: #ff495e;
+            }
+        }
+    }
+}
