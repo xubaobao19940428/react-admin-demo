@@ -4,6 +4,7 @@
 import Product from "./proudct";
 import Order from "./order";
 import Home from "./home";
+import Login from "@/pages/loginModule";
 /**
  * @AsyncComponent 懒加载组件
  * @exact 绝对匹配，这个在里面父组件一定不要加上,不然后面的子路由根本就匹配不到
@@ -11,6 +12,11 @@ import Home from "./home";
  * @component 组件名称
  */
 const Routers = [
+  {
+    path: "/login",
+    component: Login,
+    exact: true,
+  },
   ...Home,
   ...Product,
   ...Order,

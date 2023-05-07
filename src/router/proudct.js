@@ -1,10 +1,12 @@
-// import AsyncComponent from "@/components/asyncComponent";
-
-// const Layout = AsyncComponent(() => import("@/pages/layout"));
-import Layout from "@/pages/layout";
 
 import ProductList from "@/pages/productModule";
 import ProductDetail from "@/pages/productModule/productDetail";
+import AsyncComponent from "@/components/asyncComponent";
+
+const Layout = AsyncComponent(() => import("@/pages/layout"));
+// import Layout from "@/pages/layout";
+
+
 
 /**
  * @AsyncComponent 懒加载组件
@@ -19,13 +21,13 @@ const Product = [
     meta: { title: "商品中心" },
     children: [
       {
-        path: "/productList",
+        path: "/product/productList",
         name: "productList",
         component: ProductList,
         meta: { title: "商品列表" },
       },
       {
-        path: "/productDetail",
+        path: "/product/productDetail",
         name: "productDetail",
         // hidden: true,
         component: ProductDetail,
